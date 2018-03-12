@@ -1,7 +1,13 @@
-def read_text():
-    quotes = open(r"C:\Users\Bobby Musser\tutorials\movie_quotes.txt")
-    print(quotes.read())
+import webbrowser
 
-    quotes.close()
+class Movie():
+    
+    def __init__(self, title, storyline, poster_image, trailer_youtube):
+        self.title = title
+        self.storyline = storyline
+        self.poster_image = poster_image
+        self.trailer_youtube = trailer_youtube
 
-read_text()
+
+    def show_trailer(self):
+        webbrowser.open(self.trailer_youtube)
